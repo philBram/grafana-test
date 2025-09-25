@@ -42,11 +42,11 @@ const sdk = new NodeSDK({
   logRecordProcessors: [
     new SimpleLogRecordProcessor(
       new OTLPLogExporter({
-        //url: 'http://localhost:4318/v1/logs',
-        url: process.env.OTEL_EXPORTER_OTLP_ENDPOINT + '/v1/logs',
+        url: 'http://localhost:4318/v1/logs',
+        /*url: process.env.OTEL_EXPORTER_OTLP_ENDPOINT + '/v1/logs',
         headers: {
           Authorization: process.env.OTEL_EXPORTER_OTLP_TOKEN!
-        }
+        }*/
       })
     ),
   ],
